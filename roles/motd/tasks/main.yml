@@ -1,0 +1,3 @@
+---
+- name: Place profile.d script for cowsay
+  copy: src=motd.sh dest=/etc/profile.d/motd.sh

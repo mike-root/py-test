@@ -1,0 +1,9 @@
+---
+- name: Cowsay Module
+  hosts: cowsay
+  remote_user: centos
+
+  roles:
+    - cowsay
+    - fortune
+    - motd
