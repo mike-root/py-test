@@ -13,5 +13,7 @@
   tasks:
     - name: return motd
       command: cat /etc/motd
+      register: motd
+    - debug: msg="{{ motd.stdout }}"
   
     
