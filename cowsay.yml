@@ -1,6 +1,7 @@
 ---
 - name: Cowsay Module
   hosts: cowsay
+  become: true
   remote_user: centos
 
   roles:
