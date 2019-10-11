@@ -9,7 +9,7 @@
 
   tasks:
     - name: Run scan
-      shell: "oscap xccdf eval --results results.xml --profile xccdf_org.ssgproject.content_profile_pci-dss /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml"
+      shell: "oscap xccdf eval --remediate --results results.xml --profile xccdf_org.ssgproject.content_profile_pci-dss /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml"
       register: scan
     - debug: msg="{{ scan.stdout }}"
   
