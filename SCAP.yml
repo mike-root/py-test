@@ -10,13 +10,3 @@
   tasks:
     - name: Run scan
       shell: "oscap xccdf eval --remediate --fetch-remote-resources --results results.xml --profile xccdf_org.ssgproject.content_profile_pci-dss /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml"
-
-    - name: Get count of rules
-      xml:
-        path: ./results.xml
-        xpath: /rule-result/result/ident
-        count: yes
-      register: hits
-
-    - debug:
-        var: hits.count
