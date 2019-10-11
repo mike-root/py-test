@@ -12,7 +12,7 @@
     
   tasks:
     - name: return motd
-      command: fortune | cowsay
+      shell: "fortune | cowsay"
       register: motd
     - debug: msg="{{ motd.stdout }}"
     - debug: msg="{{ motd.stderr }}"
