@@ -9,8 +9,10 @@
         owner=root group=root mode=0644
 
 - name: Install OpenSCAP packages on all machines.
-  yum: pkg="{{ item }}" state=installed
-  with_items:
+  yum:
+      name: "{{ packages }}"
+  vars:
+    packages:
     - openscap-scanner
     - openscap-utils
 
