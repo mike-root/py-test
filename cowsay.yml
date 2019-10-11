@@ -12,8 +12,9 @@
     
   tasks:
     - name: return motd
-      command: cat /etc/motd
+      command: fortune | cowsay
       register: motd
     - debug: msg="{{ motd.stdout }}"
+    - debug: msg="{{ motd.stderr }}"
   
     
