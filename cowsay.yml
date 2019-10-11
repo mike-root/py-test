@@ -9,7 +9,9 @@
     - cowsay
     - fortune
     - motd
-- name: return motd to registered var
-  command: cat /etc/motd
+    
+  tasks:
+    - name: return motd
+      command: cat /etc/motd
   
     
