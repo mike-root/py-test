@@ -18,5 +18,5 @@
         count: yes
       register: hits
 
-      - debug:
-          var: hits.count
+    - debug:
+        var: hits.count
