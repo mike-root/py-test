@@ -32,5 +32,5 @@
 - name: Run scan
   shell: "oscap xccdf eval --remediate --fetch-remote-resources --results results.xml --profile xccdf_org.ssgproject.content_profile_pci-dss /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml"
   become: yes
-  become_user: {{ oscap_user }}
+  become_user: "{{ oscap_user }}"
   when: oscap_user is defined
