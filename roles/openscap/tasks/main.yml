@@ -15,6 +15,7 @@
     packages:
     - openscap-scanner
     - openscap-utils
+    - scap-security-guide
 
 # If oscap_user is defined, create the account and grant it sudo capability.
 # FIXME: Use a templated sudoers.d file so oscap_user can be insserted.
