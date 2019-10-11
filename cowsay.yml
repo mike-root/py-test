@@ -12,9 +12,9 @@
     
   tasks:
     - name: return motd
-      shell: "fortune | cowsay"
+      shell: "fortune"
       register: motd
     - debug: msg="{{ motd.stdout }}"
-    - debug: msg="{{ motd.stderr }}"
+
   
     
